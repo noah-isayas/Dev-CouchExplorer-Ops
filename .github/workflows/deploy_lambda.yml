@@ -35,3 +35,4 @@ jobs:
       - name: Deploy SAM application
         run: |
           sam deploy --no-confirm-changeset --stack-name img-generator-knr3 --capabilities CAPABILITY_IAM
+
