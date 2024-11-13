@@ -1,0 +1,11 @@
+version = 0.1
+[default.deploy.parameters]
+stack_name = "img-generator-knr3"
+resolve_s3 = true
+s3_prefix = "img-generator-knr3"
+region = "eu-west-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+disable_rollback = true
+parameter_overrides = "BucketName=\"pgr301-couch-explorers\" CandidateNumber=\"3\" ModelId=\"amazon.titan-image-generator-v1\""
+image_repositories = []
