@@ -1,4 +1,4 @@
-name: Deploy SAM Application
+name: Deploy Lambda Function
 
 on:
   push:
@@ -13,26 +13,27 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Python 3.9
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.9
+          python-version: '3.9'
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v3
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-west-1
 
-      - name: Install AWS SAM CLI
+      - name: Package Lambda function
         run: |
-          sudo pip install aws-sam-cli
+          cd sam_lambda/image-generator  # Navigate to the Lambda function directory
+          zip -r ../../lambda_function.zip .
 
-      - name: Build SAM application
-        run: sam build --template sam_lambda/image-generator/template.yml
-
-      - name: Deploy SAM application
+      - name: Deploy Lambda function
         run: |
-          sam deploy --no-confirm-changeset --stack-name img-generator-knr3 --capabilities CAPABILITY_IAM
+          aws lambda update-function-code \
+            --function-name img-generator-knr3-ImageGeneratorFunction-NDWKIA6ueD3n \
+            --zip-file fileb://lambda_function.zip
+
 
