@@ -27,13 +27,14 @@ jobs:
 
       - name: Package Lambda function
         run: |
-          cd sam_lambda/image-generator  # Navigate to the Lambda function directory
-          zip -r ../../lambda_function.zip .
+          cd sam_lambda/image-generator
+          zip ../../lambda_function.zip generate_image.py 
 
       - name: Deploy Lambda function
         run: |
           aws lambda update-function-code \
             --function-name img-generator-knr3-ImageGeneratorFunction-NDWKIA6ueD3n \
             --zip-file fileb://lambda_function.zip
+
 
 
