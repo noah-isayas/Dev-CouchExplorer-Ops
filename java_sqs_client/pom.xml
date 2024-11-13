@@ -11,7 +11,7 @@
     <groupId>no.pgr301.2024</groupId>
     <artifactId>imagegenerator</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>imagegenerator</name>
+    <name>imagegenerator-kandidatnr3</name>
     <description>Image generator based on AWS bedrocl</description>
     <url/>
     <licenses>

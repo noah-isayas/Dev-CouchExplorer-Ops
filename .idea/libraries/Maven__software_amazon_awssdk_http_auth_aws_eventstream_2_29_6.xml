@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: software.amazon.awssdk:http-auth-aws-eventstream:2.29.6">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/software/amazon/awssdk/http-auth-aws-eventstream/2.29.6/http-auth-aws-eventstream-2.29.6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/software/amazon/awssdk/http-auth-aws-eventstream/2.29.6/http-auth-aws-eventstream-2.29.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/software/amazon/awssdk/http-auth-aws-eventstream/2.29.6/http-auth-aws-eventstream-2.29.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
