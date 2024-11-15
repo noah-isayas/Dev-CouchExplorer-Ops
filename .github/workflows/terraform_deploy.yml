@@ -36,6 +36,22 @@ jobs:
       - name: Terraform Init
         run: terraform init
 
+      - name: Initialize Terraform
+        run: terraform init
+
+      - name: Import existing IAM role if necessary
+        run: |
+          terraform import aws_iam_role.lambda_execution_role arn:aws:iam::244530008913:role/lambda_execution_role_kn3 || echo "Role does not exist, continuing"
+
+      - name: Apply Terraform changes
+        if: github.ref == 'refs/heads/main'
+        run: terraform apply -auto-approve
+
+      - name: Plan Terraform changes
+        if: github.ref != 'refs/heads/main'
+        run: terraform plan
+
+
       - name: Terraform Plan
         if: github.ref != 'refs/heads/main'
         run: terraform plan
