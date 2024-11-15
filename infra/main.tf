@@ -10,9 +10,10 @@ terraform {
 
   backend "s3" {
     bucket = "pgr301-2024-terraform-state"
-    key    = "dev-couch-explorer.tfstate"
+    key    = "${var.candidate_number}/dev-couch-explorer.tfstate"
     region = "eu-west-1"
   }
+
 }
 
 provider "aws" {
