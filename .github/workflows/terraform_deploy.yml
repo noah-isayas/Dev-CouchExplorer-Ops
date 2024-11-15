@@ -3,8 +3,7 @@ name: Deploy Terraform Infrastructure
 on:
   push:
     branches:
-      - main
-      - feature/terraform-infra-deploy
+      - '**'
 
 jobs:
   terraform:
@@ -36,10 +35,6 @@ jobs:
       - name: Initialize Terraform
         run: terraform init
 
-      - name: Import existing IAM role if necessary
-        run: |
-          terraform import aws_iam_role.lambda_execution_role arn:aws:iam::244530008913:role/lambda_execution_role_kn3 || echo "Role does not exist, continuing"
-
       - name: Terraform Plan
         if: github.ref != 'refs/heads/main'
         run: terraform plan
@@ -47,3 +42,4 @@ jobs:
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main'
         run: terraform apply -auto-approve
+

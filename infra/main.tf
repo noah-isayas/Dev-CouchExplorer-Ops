@@ -13,7 +13,6 @@ terraform {
     key    = "3/dev-couch-explorer.tfstate"
     region = "eu-west-1"
   }
-
 }
 
 provider "aws" {
@@ -22,11 +21,11 @@ provider "aws" {
 
 resource "aws_sqs_queue" "image_requests_queue" {
   name                       = "image-requests-queue"
-  visibility_timeout_seconds = 30
+  visibility_timeout_seconds = 60
 }
 
 resource "aws_iam_role" "lambda_execution_role" {
-  name = "lambda_execution_role_kn3"
+  name = "lambda_execution_role_kn3_v2"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
@@ -43,7 +42,7 @@ resource "aws_iam_role" "lambda_execution_role" {
 }
 
 resource "aws_iam_role_policy" "lambda_policy" {
-  name   = "lambda_policy"
+  name   = "lambda_policy_v2"
   role   = aws_iam_role.lambda_execution_role.id
   policy = jsonencode({
     Version = "2012-10-17"
@@ -67,6 +66,14 @@ resource "aws_iam_role_policy" "lambda_policy" {
         Action   = ["bedrock:InvokeModel"]
         Effect   = "Allow"
         Resource = "*"
+      },
+      {
+        Action   = ["s3:GetObject", "s3:PutObject", "s3:DeleteObject", "s3:ListBucket"]
+        Effect   = "Allow"
+        Resource = [
+          "arn:aws:s3:::pgr301-2024-terraform-state",
+          "arn:aws:s3:::pgr301-2024-terraform-state/*"
+        ]
       }
     ]
   })
@@ -74,7 +81,7 @@ resource "aws_iam_role_policy" "lambda_policy" {
 
 resource "aws_lambda_function" "image_generator_lambda" {
   filename         = "lambda_sqs.zip"
-  function_name    = "image-generator-sqs-kn3"
+  function_name    = "image-generator-sqs-kn3-v2"
   role             = aws_iam_role.lambda_execution_role.arn
   handler          = "lambda_sqs.lambda_handler"
   runtime          = "python3.9"
@@ -84,7 +91,7 @@ resource "aws_lambda_function" "image_generator_lambda" {
 
   environment {
     variables = {
-      BUCKET_NAME = var.bucket_name
+      BUCKET_NAME      = var.bucket_name
       CANDIDATE_NUMBER = var.candidate_number
     }
   }
@@ -96,4 +103,5 @@ resource "aws_lambda_event_source_mapping" "sqs_trigger" {
   event_source_arn = aws_sqs_queue.image_requests_queue.arn
   function_name    = aws_lambda_function.image_generator_lambda.arn
   batch_size       = 10
+  enabled          = true
 }
