@@ -60,6 +60,9 @@ target/
 *.war
 *.ear
 
+java_sqs_client/target/
+
+
 # Logs and generated files
 *.log
 
