@@ -40,6 +40,7 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t noha019/sqs-client-kn3:latest -t noha019/sqs-client-kn3:${{ env.NEW_VERSION }} .
+        working-directory: ./java_sqs_client
 
       - name: Push Docker image
         run: |
