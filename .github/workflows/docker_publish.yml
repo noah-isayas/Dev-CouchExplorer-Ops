@@ -48,6 +48,10 @@ jobs:
           docker push noha019/sqs-client-kn3:${{ env.NEW_VERSION }}
 
       - name: Create a new Git tag for the version
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
+          git config --global user.email "noahhaile1@gmail.com"
+          git config --global user.name "noah"
           git tag ${{ env.NEW_VERSION }}
           git push origin ${{ env.NEW_VERSION }}
