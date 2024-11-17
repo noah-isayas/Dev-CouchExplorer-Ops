@@ -53,3 +53,21 @@ override.tf.json
 
 # AWS SAM artifacts (if you use SAM for local testing and deployment)
 .aws-sam/
+
+# Maven / Java build files
+target/
+*.jar
+*.war
+*.ear
+
+# Logs and generated files
+*.log
+
+# OS or IDE-specific files (if applicable)
+*.class
+.idea/
+.vscode/
+
+# Maven and archiver status
+maven-status/
+maven-archiver/
