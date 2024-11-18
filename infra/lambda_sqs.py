@@ -10,7 +10,7 @@ s3_client = boto3.client("s3")
 MODEL_ID = "amazon.titan-image-generator-v1"
 BUCKET_NAME = os.environ["BUCKET_NAME"]
 CANDIDATE_NUMBER = os.environ["CANDIDATE_NUMBER"]
-
+#Hi
 def lambda_handler(event, context):
     for record in event["Records"]:
         prompt = record["body"]
