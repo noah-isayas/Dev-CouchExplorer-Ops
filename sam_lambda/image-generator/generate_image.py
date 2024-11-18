@@ -10,7 +10,7 @@ def lambda_handler(event, context):
     s3_client = boto3.client("s3")
 
     # Hent miljøvariabler fra AWS Lambda-konfigurasjonen
-    model_id = os.environ.get("MODEL_ID", "amazon.titan-image-generator-v2")
+    model_id = os.environ.get("MODEL_ID", "amazon.titan-image-generator-v1")
     bucket_name = os.environ.get("BUCKET_NAME", "pgr301-couch-explorers")
     candidate_number = os.environ.get("CANDIDATE_NUMBER", "12345")
 
