@@ -27,7 +27,7 @@ Parameters:
     Description: "Candidate number"
   ModelId:
     Type: String
-    Default: "amazon.titan-image-generator-v2"
+    Default: "amazon.titan-image-generator-v1"
     Description: "Model ID for the image generation model"
 
 Resources:
