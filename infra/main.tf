@@ -124,7 +124,7 @@ resource "aws_cloudwatch_metric_alarm" "sqs_oldest_message_alarm" {
   namespace           = "AWS/SQS"
   period              = 60
   statistic           = "Average"
-  threshold           = 300
+  threshold           = 1
   alarm_description   = "Triggers when the oldest message in the SQS queue is older than 5 minutes."
   dimensions = {
     QueueName = aws_sqs_queue.image_requests_queue.name
