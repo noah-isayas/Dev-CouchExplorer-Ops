@@ -26,18 +26,34 @@ jobs:
       - name: Get current version from Git tags
         id: get_version
         run: |
-          # Get the latest tag and increment it
-          latest_version=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
-          echo "Latest version: $latest_version"
-          # Increment version using semantic versioning
-          base_version=${latest_version#v}
-          major=$(echo $base_version | cut -d. -f1)
-          minor=$(echo $base_version | cut -d. -f2)
-          patch=$(echo $base_version | cut -d. -f3)
-          new_patch=$((patch + 1))
-          new_version="v${major}.${minor}.${new_patch}"
-          echo "NEW_VERSION=$new_version" >> $GITHUB_ENV
-          echo "New version: $new_version"
+            # Get the latest tag and increment it
+            latest_version=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
+            echo "Latest version: $latest_version"
+            # Increment version using semantic versioning
+            base_version=${latest_version#v}
+            major=$(echo $base_version | cut -d. -f1)
+            minor=$(echo $base_version | cut -d. -f2)
+            patch=$(echo $base_version | cut -d. -f3)
+            
+            # Increment logic:
+            if [ $patch -ge 9 ]; then
+              new_patch=0
+              new_minor=$((minor + 1))
+            else
+              new_patch=$((patch + 1))
+              new_minor=$minor
+            fi
+            
+            if [ $new_minor -ge 10 ]; then
+              new_minor=0
+              new_major=$((major + 1))
+            else
+              new_major=$major
+            fi
+            
+            new_version="v${new_major}.${new_minor}.${new_patch}"
+            echo "NEW_VERSION=$new_version" >> $GITHUB_ENV
+            echo "New version: $new_version"
 
       - name: Build Docker image
         run: |
