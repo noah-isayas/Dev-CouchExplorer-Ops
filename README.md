@@ -2,7 +2,8 @@
 
 Velkommen til prosjektet for Couch Explorers! Dette prosjektet demonstrerer hvordan serverless arkitektur kan benyttes til å implementere en løsning for generering av AI-baserte bilder, med fokus på skalerbarhet, automatisering og kostnadseffektivitet.
 
-Denne README inneholder en kortversjon av drøftelsen om serverless arkitektur versus mikrotjenestearkitektur. Hvis du ønsker å lese hele drøftelsen, finner du den i en separat fil som er linket her: 👉 **Full drøftelse av Oppgave 5** (lenke legges inn straks).
+Denne README inneholder en kortversjon av drøftelsen om serverless arkitektur versus mikrotjenestearkitektur. Hvis du ønsker å lese hele drøftelsen, finner du den i en separat fil som er linket her: 👉 [Les mer om dette her](drofting.md)
+
 
 ## 🚀 Leveranser
 
@@ -96,7 +97,7 @@ For mer detaljer, les den fullstendige drøftelsen her: Full drøftelse av Oppga
 | 2A      | SQS URL: [https://sqs.eu-west-1.amazonaws.com/244530008913/image-requests-queue](https://sqs.eu-west-1.amazonaws.com/244530008913/image-requests-queue) |
 | 2B      | Workflows: [https://github.com/noah-isayas/Dev-CouchExplorer-Ops/actions/runs/11858442160/job/33049069715](https://github.com/noah-isayas/Dev-CouchExplorer-Ops/actions/runs/11858442160/job/33049069715) / [https://github.com/noah-isayas/Dev-CouchExplorer-Ops/actions/runs/11858396224/job/33048919496](https://github.com/noah-isayas/Dev-CouchExplorer-Ops/actions/runs/11858396224/job/33048919496) |
 | 3       | Docker Image: [https://hub.docker.com/r/noha019/sqs-client-kn3](https://hub.docker.com/r/noha019/sqs-client-kn3) |
-| 5       | Kort drøftelse i README / Full drøftelse av Oppgave 5 (lenken må legges inn her) |
+| 5       | Kort drøftelse i README / Full drøftelse [Les mer om dette her](drofting.md)|
 
 ### Tips for sensor
 Denne README-en gir en rask oversikt over prosjektet. For dybdeanalyser, detaljerte drøftelser og implementasjonsvurderinger, se den fullstendige drøftelsen i lenken ovenfor.
