@@ -87,7 +87,7 @@ Serverless og mikrotjenestearkitektur representerer to distinkte tilnærminger t
 ### Konklusjon
 Valget mellom serverless og mikrotjenestearkitektur avhenger av prosjektets behov og organisasjonens ressurser. Serverless gir fleksibilitet og lav inngangsterskel, mens mikrotjenestearkitektur gir mer kontroll og egner seg for komplekse, kontinuerlige tjenester.
 
-For mer detaljer, les den fullstendige drøftelsen her: Full drøftelse av Oppgave 5 (lenken må legges inn her).
+For mer detaljer, les den fullstendige drøftelsen her: Full drøftelse av Oppgave 5 {[Les mer om dette her]}(drofting.md).
 
 ### Oppsummeringstabell for Leveranser
 | Oppgave | Leveranse |
