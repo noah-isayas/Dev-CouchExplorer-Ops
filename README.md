@@ -87,17 +87,17 @@ Serverless og mikrotjenestearkitektur representerer to distinkte tilnærminger t
 ### Konklusjon
 Valget mellom serverless og mikrotjenestearkitektur avhenger av prosjektets behov og organisasjonens ressurser. Serverless gir fleksibilitet og lav inngangsterskel, mens mikrotjenestearkitektur gir mer kontroll og egner seg for komplekse, kontinuerlige tjenester.
 
-For mer detaljer, les den fullstendige drøftelsen her: Full drøftelse av Oppgave 5 {[Les mer om dette her]}(drofting.md).
+For mer detaljer, les den fullstendige drøftelsen her: Full drøftelse av Oppgave 5 [Les mer om dette her](drofting.md).
 
 ### Oppsummeringstabell for Leveranser
-| Oppgave | Leveranse |
-|---------|-----------|
-| 1A      | Endepunkt: [https://0kafqwa92m.execute-api.eu-west-1.amazonaws.com/Prod/generate-image](https://0kafqwa92m.execute-api.eu-west-1.amazonaws.com/Prod/generate-image) |
-| 1B      | Workflow: [https://github.com/noah-isayas/Dev-CouchExplorer-Ops/actions/runs/11822404640/job/32939376160](https://github.com/noah-isayas/Dev-CouchExplorer-Ops/actions/runs/11822404640/job/32939376160) |
-| 2A      | SQS URL: [https://sqs.eu-west-1.amazonaws.com/244530008913/image-requests-queue](https://sqs.eu-west-1.amazonaws.com/244530008913/image-requests-queue) |
+| Oppgave | Leveranse                                                                                                                                                                                                                                                                                                                                                                                                  |
+|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1A      | Endepunkt: [https://0kafqwa92m.execute-api.eu-west-1.amazonaws.com/Prod/generate-image](https://0kafqwa92m.execute-api.eu-west-1.amazonaws.com/Prod/generate-image)                                                                                                                                                                                                                                        |
+| 1B      | Workflow: [https://github.com/noah-isayas/Dev-CouchExplorer-Ops/actions/runs/11822404640/job/32939376160](https://github.com/noah-isayas/Dev-CouchExplorer-Ops/actions/runs/11822404640/job/32939376160)                                                                                                                                                                                                   |
+| 2A      | SQS URL: [https://sqs.eu-west-1.amazonaws.com/244530008913/image-requests-queue](https://sqs.eu-west-1.amazonaws.com/244530008913/image-requests-queue)                                                                                                                                                                                                                                                    |
 | 2B      | Workflows: [https://github.com/noah-isayas/Dev-CouchExplorer-Ops/actions/runs/11858442160/job/33049069715](https://github.com/noah-isayas/Dev-CouchExplorer-Ops/actions/runs/11858442160/job/33049069715) / [https://github.com/noah-isayas/Dev-CouchExplorer-Ops/actions/runs/11858396224/job/33048919496](https://github.com/noah-isayas/Dev-CouchExplorer-Ops/actions/runs/11858396224/job/33048919496) |
-| 3       | Docker Image: [https://hub.docker.com/r/noha019/sqs-client-kn3](https://hub.docker.com/r/noha019/sqs-client-kn3) |
-| 5       | Kort drøftelse i README / Full drøftelse [Les mer om dette her](drofting.md)|
+| 3       | Docker Image: [https://hub.docker.com/r/noha019/sqs-client-kn3](https://hub.docker.com/r/noha019/sqs-client-kn3)                                                                                                                                                                                                                                                                                           |
+| 5       | Kort drøftelse i README / Full drøftelse [Les mer om dette her](drofting.md)                                                                                                                                                                                                                                                                                                                               |
 
 ### Tips for sensor
 Denne README-en gir en rask oversikt over prosjektet. For dybdeanalyser, detaljerte drøftelser og implementasjonsvurderinger, se den fullstendige drøftelsen i lenken ovenfor.
