@@ -53,7 +53,8 @@ docker run -e AWS_ACCESS_KEY_ID=xxx -e AWS_SECRET_ACCESS_KEY=yyy -e https://sqs.
 ```
 ### Oppgave 4
 
-Endre ApproximateAgeOfOldestMessage til noe som lar deg teste
+Endre threshold i ApproximateAgeOfOldestMessage til noe som lar deg teste
+
 Endre notification_email i variables.tf med ønsket epost adresse
 
 ### Oppgave 5: Drøftelse – Serverless vs. Mikrotjenestearkitektur
