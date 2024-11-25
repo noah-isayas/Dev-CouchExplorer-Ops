@@ -14,10 +14,7 @@ Endepunkt: `https://f8ty6rsir4.execute-api.eu-west-1.amazonaws.com/Prod/generate
 
 Eksempel CURL-kommando:
 ```bash
-curl --request POST \
-  --url https://f8ty6rsir4.execute-api.eu-west-1.amazonaws.com/Prod/generate-image \
-  --header "Content-Type: application/json" \
-  --data '{"prompt": "Skriv in prompt her😊"}'
+curl --request POST --url https://f8ty6rsir4.execute-api.eu-west-1.amazonaws.com/Prod/generate-image --header "Content-Type: application/json" --data "{\"prompt\": \"Skriv in prompt her😊\"}"
 ```
 
 #### Postman:
