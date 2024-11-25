@@ -8,19 +8,21 @@ Denne README inneholder en kortversjon av drøftelsen om serverless arkitektur v
 ## 🚀 Leveranser
 
 ### Oppgave 1A: SAM Lambda
-Endepunkt: `https://0kafqwa92m.execute-api.eu-west-1.amazonaws.com/Prod/generate-image`
+Lambda /m API Gateway trigger: image-generator-ImageGeneratorFunction-LD6gmOqNXewi
+
+Endepunkt: `https://f8ty6rsir4.execute-api.eu-west-1.amazonaws.com/Prod/generate-image`
 
 Eksempel CURL-kommando:
 ```bash
 curl --request POST \
-  --url https://0kafqwa92m.execute-api.eu-west-1.amazonaws.com/Prod/generate-image \
+  --url https://f8ty6rsir4.execute-api.eu-west-1.amazonaws.com/Prod/generate-image \
   --header "Content-Type: application/json" \
   --data '{"prompt": "Skriv in prompt her😊"}'
 ```
 
 #### Postman:
 - Metode: POST
-- URL: [https://0kafqwa92m.execute-api.eu-west-1.amazonaws.com/Prod/generate-image](https://0kafqwa92m.execute-api.eu-west-1.amazonaws.com/Prod/generate-image)
+- URL: [https://f8ty6rsir4.execute-api.eu-west-1.amazonaws.com/Prod/generate-image](https://f8ty6rsir4.execute-api.eu-west-1.amazonaws.com/Prod/generate-image)
 - Headers: `Content-Type: application/json`
 - Body: `{ "prompt": "Skriv in prompt her😊" }`
 
