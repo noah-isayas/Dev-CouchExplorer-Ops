@@ -33,7 +33,7 @@ jobs:
       - name: Deploy Lambda function
         run: |
           aws lambda update-function-code \
-            --function-name img-generator-knr3-ImageGeneratorFunction-NDWKIA6ueD3n \
+            --function-name image-generator-ImageGeneratorFunction-LD6gmOqNXewi \
             --zip-file fileb://lambda_function.zip
 
 
