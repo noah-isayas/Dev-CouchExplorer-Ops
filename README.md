@@ -24,7 +24,7 @@ curl --request POST --url https://f8ty6rsir4.execute-api.eu-west-1.amazonaws.com
 - Body: `{ "prompt": "Skriv in prompt her😊" }`
 
 ### Leveranse Oppgave 1B, SAM Lambda
-Link til kjørt workflow: [https://github.com/noah-isayas/Dev-CouchExplorer-Ops/actions/runs/11822404640/job/32939376160](https://github.com/noah-isayas/Dev-CouchExplorer-Ops/actions/runs/11822404640/job/32939376160)
+Link til kjørt workflow: [https://github.com/noah-isayas/Dev-CouchExplorer-Ops/actions/runs/12016977624/job/33498328532](https://github.com/noah-isayas/Dev-CouchExplorer-Ops/actions/runs/12016977624/job/33498328532)
 
 ### Leveranse 2A
 Hvis det er usikkerhet rundt hvilken funksjon som er den nyeste, er det denne: `image-generator-sqs-kn3-v2`, da jeg lagde en versjon 2.
